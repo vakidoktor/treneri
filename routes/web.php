@@ -8,3 +8,6 @@ Route::get('/', function () {
 
   return view('travel_list', ['visited' => $visited, 'togo' => $togo ] );
 });
+
+Route::post('/create', 'Api\UserController@createUser');
+Route::get('/save', 'Api\UserController@getUsers');
