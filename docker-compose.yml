@@ -31,6 +31,8 @@ services:
       - ./docker-compose/mysql:/docker-entrypoint-initdb.d
     networks:
       - treneri
+    ports:
+      - '33060:3306'
 
   nginx:
     image: nginx:alpine
