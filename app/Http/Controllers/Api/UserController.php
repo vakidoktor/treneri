@@ -9,7 +9,7 @@ use Illuminate\Http\Request;
 final class UserController extends Controller
 {
     /**
-     * Save canva design from the editor - initial load
+     * Save user
      */
     public function createUser(Request $request)
     {
@@ -23,7 +23,7 @@ final class UserController extends Controller
     }
 
     /**
-     * Save Canva design and redirect to configurator
+     * get user
      */
     public function getUsers()
     {
