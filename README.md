@@ -1,4 +1,4 @@
-# Travellist - Laravel Demo App
+# Treneri - Laravel Demo App
 
 This is a Laravel 6 demo application to support our Laravel guides.
 
