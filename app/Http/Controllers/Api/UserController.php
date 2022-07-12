@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Api;
 use App\Http\Controllers\Controller;
 use App\Places;
 use Illuminate\Http\Request;
+use Cache;
 
 final class UserController extends Controller
 {
@@ -27,7 +28,9 @@ final class UserController extends Controller
      */
     public function getUsers()
     {
-        $users = Places::getByVisited();
-        return $users;
+        return Cache::remember('get-users', now()->addDays(30), function () {
+            $users = Places::getByVisited();
+            return $users;
+        });
     }
 }
